@@ -1,0 +1,13 @@
+<form>Space ID: <input [(ngModel)]="spaceId" name="hehe"><button (click)="update()">Update</button></form>
+<div *ngIf="template" class="poster-container">
+	<svg class="poster-content" viewBox="0 0 100 141" preserveAspectRatio="none">
+		<image x="0" y="0" width="100" height="141" [attr.xlink:href]="template.bgImgUrl" preserveAspectRatio="none"></image>
+		<image x="30" y="91" width="40" height="40" [attr.xlink:href]="template.qrImgUrl" preserveAspectRatio="none"></image>
+	</svg>
+	<div class="poster-content">
+		<div class="headline">{{template.headline}}</div>
+		<div class="detail-container" style="top: 22%"><b>{{template.detail1}}</b></div>
+		<div class="detail-container" style="top: 30%"><b>{{template.detail2}}</b></div>
+		<div class="detail-container" style="top: 38%">{{template.detail3}}</div>
+	</div>
+</div>

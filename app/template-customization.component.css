@@ -1,0 +1,20 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col-1-2 {
+	float: left;
+	width: 50%;
+}
+
+.poster-creation-form * {
+	margin: 5px;
+}
