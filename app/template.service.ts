@@ -10,10 +10,16 @@ import { TEMPLATES } from './template-default';
 
 export class TemCusService {
 	constructor(private http: Http){}
-	getTemplate(id : number) : Template {
-		return TEMPLATES.filter(template => template.id == id)[0];
+
+	getAllTemplates(): Template[] {
+		return TEMPLATES;
 	}
 
+	getTemplate(id : number): Template {
+		return TEMPLATES.find(template => template.id == id);
+	}
+
+	//NOTE: the following codes should be move to a separate service
 	getPoster(id: number): Promise<Template> {
 		return this.http.get("https://o88z2j88yh.execute-api.us-east-1.amazonaws.com/beta/spaces/" + id).toPromise().then(function (response) {
 			var poster = TEMPLATES[1];

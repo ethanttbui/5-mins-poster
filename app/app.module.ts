@@ -17,12 +17,18 @@ import { Attempspace } from './attempspace/attempspace.component';
     HttpModule, 
   	RouterModule.forRoot([
   		{
-  			path: 'template-1',
-  			component: Template1
-  		},
-  		{
-  			path: 'template-2',
-  			component: Template2
+  			path: 'template/:id',
+  			component: TemCusComponent,
+        children: [
+          {
+             path:'1',
+             component: Template1
+          },
+          {
+             path:'2',
+             component: Template2
+          }
+        ]
   		},
       {
         path: 'attempspace',

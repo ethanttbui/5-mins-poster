@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Template } from './template';
 import { TemCusService } from './template.service';
@@ -6,20 +6,19 @@ import { TemCusService } from './template.service';
 @Component ({
 	selector: 'my-app',
 	template: `
-		<a routerLink="/template-1" (click)="getTemplate(1)">Template-1</a>
-		<a routerLink="/template-2" (click)="getTemplate(2)">Template-2</a>
+		<a *ngFor="let template of allTemplates" [routerLink]="['/template',template.id,template.id]">Template-{{template.id}}</a>
 		<a routerLink="/attempspace">Attempspace</a>
-		<my-tem-cus [template]="selectedTemplate"></my-tem-cus>
+		<router-outlet></router-outlet>
 	`,
 	providers: [ TemCusService ]
 })
 
-export class AppComponent {
-	selectedTemplate: Template; 
+export class AppComponent implements OnInit {
+	allTemplates: Template[]; 
 
 	constructor(private tcs: TemCusService) {}
 
-	getTemplate(id: number): void {
-		this.selectedTemplate = this.tcs.getTemplate(id);
+	ngOnInit(): void {
+		this.allTemplates = this.tcs.getAllTemplates();
 	}
 }

@@ -1,16 +1,25 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 import { Template } from './template';
+import { TemCusService } from './template.service';
 
 @Component({
 	moduleId: module.id,
 	selector: 'my-tem-cus',
 	templateUrl: 'template-customization.component.html',
-	styleUrls: [ 'template-customization.component.css' ]
+	styleUrls: [ 'template-customization.component.css' ],
+	providers: [ TemCusService ]
 })
 
-export class TemCusComponent {
-	@Input() template: Template;	
+export class TemCusComponent implements OnInit {
+	template: Template;
+
+	constructor(private tcs: TemCusService, private ar: ActivatedRoute) {}
+
+	ngOnInit(): void {
+		this.ar.params.subscribe((params: Params) => this.template = this.tcs.getTemplate(+params['id']));
+	}
 
 	readFileUrl(event: any) : void {
 		if (event.target.files && event.target.files[0]) {
