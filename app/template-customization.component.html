@@ -1,18 +1,18 @@
 <div class="clearfix">
 	<form *ngIf="template" class="poster-creation-form col-1-2">
-		Headline <input [(ngModel)]="template.headline" name="headline"><br>
-		Detail 1 <input [(ngModel)]="template.detail1" name="detail1"><br>
-		Detail 2 <input [(ngModel)]="template.detail2" name="detail2"><br>
-		Detail 3 <input [(ngModel)]="template.detail3" name="detail3"><br>
-		Background Image <input name="background" type="file" (change)="readFileUrl($event)"><br>
-		Banner Image <input name="banner" type="file" (change)="readFileUrl($event)"><br>
-		Supplementary Image <input name="supplementary" type="file" (change)="readFileUrl($event)">
+		Headline <input [(ngModel)]="template.texts[0]" name="headline"><br>
+		Detail 1 <textarea rows="3" [(ngModel)]="template.texts[1]" name="detail1"></textarea><br>
+		Detail 2 <textarea rows="3" [(ngModel)]="template.texts[2]" name="detail2"></textarea><br>
+		Detail 3 <textarea rows="3" [(ngModel)]="template.texts[3]" name="detail3"></textarea><br>
+		Background Image <input type="file" (change)="readImageUrl($event,1)"><br>
+		Banner Image <input type="file" (change)="readImageUrl($event,2)"><br>
+		Supplementary Image <input type="file" (change)="readImageUrl($event,3)">
 		<hr>
 		Contact Method <input type="checkbox" name="contact" value="phone"> Phone
   		<input type="checkbox" name="contact" value="chat"> Email
   		<input type="checkbox" name="contact" value="chat"> Chat <br>
 		More Info <textarea rows="4" name="detailedDes"></textarea><br>
-		Attachment <input type="file" name="uploadFile">
+		Attachment <input type="file" name="uploadFile"><br>
 	</form>
 	<div class="col-1-2">
 		<router-outlet></router-outlet>

@@ -19,7 +19,6 @@
 	font-size: 6vw;
 	font-family: Impact; 
 	text-align: center;
-	text-anchor: middle;
 	text-shadow: 0.4vw 0.4vw 1.2vw black;
 }
 
@@ -29,13 +28,12 @@
 	text-align: center;
 }
 
-.detail-container > div {
+.detail-container > span {
 	display: inline-block;
 	padding: 2%;
 
 	font-size: 2vw;
-	font-family: Tahoma; 
-	text-anchor: middle;
+	font-family: Tahoma;
 	white-space: pre-line;
 
 	background-color: rgba(255, 255, 255, 0.7);

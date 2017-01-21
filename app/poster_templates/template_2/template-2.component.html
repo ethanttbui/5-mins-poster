@@ -1,17 +1,18 @@
 <div class="poster-container">
 	<svg class="poster-content" viewBox="0 0 100 141" preserveAspectRatio="none">
-		<image x="0" y="0" width="100" height="141" [attr.xlink:href]="template.bgImgUrl" preserveAspectRatio="none"></image>
-		<image x="30" y="91" width="40" height="40" [attr.xlink:href]="template.qrImgUrl" preserveAspectRatio="none"></image>
+		<image x="0" y="0" width="100" height="141" [attr.xlink:href]="template.images[1]" preserveAspectRatio="none"></image>
+		<image x="30" y="91" width="40" height="40" [attr.xlink:href]="template.images[0]" preserveAspectRatio="none"></image>
 	</svg>
 	<div class="poster-content">
-		<div class="headline">{{template.headline}}</div>
+		<div class="headline">{{template.texts[0]}}</div>
 		<div class="detail-container">
-			<div>{{template.detail1}}</div>
+			<span>{{template.texts[1]}}</span>
 		</div>
 		<div class="detail-container">
-			<div>{{template.detail2}}</div>
+			<span>{{template.texts[2]}}</span>
 		</div>
 		<div class="detail-container">
-			<div>{{template.detail3}}</div>
+			<span>{{template.texts[3]}}</span>
+		</div>
 	</div>
 </div>

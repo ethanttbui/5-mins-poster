@@ -8,7 +8,7 @@ import { Template } from '../template';
   selector: 'my-template',
   templateUrl: 'attempspace.component.html',
   styleUrls: [ 'attempspace.component.css' ],
-  providers: [ TemCusService	]
+  providers: [ TemCusService ]
 })
 
 export class Attempspace implements OnInit {

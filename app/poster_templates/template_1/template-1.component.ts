@@ -4,7 +4,7 @@ import { TemCusService } from '../../template.service';
 
 @Component({
 	moduleId: module.id,
-  selector: 'my-template',
+	selector: 'my-template',
   templateUrl: 'template-1.component.html',
   styleUrls: [ 'template-1.component.css' ],
   providers: [ TemCusService ]

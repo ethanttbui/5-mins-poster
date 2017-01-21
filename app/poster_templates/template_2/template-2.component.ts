@@ -4,10 +4,10 @@ import { TemCusService } from '../../template.service';
 
 @Component({
 	moduleId: module.id,
-  selector: 'my-template',
+	selector: 'my-template',
   templateUrl: 'template-2.component.html',
   styleUrls: [ 'template-2.component.css' ],
-  providers: [ TemCusService	]
+  providers: [ TemCusService ]
 })
 
 export class Template2 { 
