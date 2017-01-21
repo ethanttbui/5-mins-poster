@@ -1,0 +1,33 @@
+.poster-container {
+	position: relative;
+	padding-top: 71%;     /*set height relative to width, A4 size*/
+	border: 2px solid black;
+}
+
+.poster-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.text {
+	position: absolute;
+	top: 10%;
+	left: 5%;
+	width: 65%;
+	transform: rotate(-8deg);
+	font-family: "Comic Sans MS";
+
+}
+
+.headline {
+	font-size: 3vw;
+}
+
+.detail {
+	font-size: 2vw;
+	white-space: pre-line;
+}

@@ -1,0 +1,34 @@
+.poster-container {
+	position: relative;
+	padding-top: 141%;     /*set height relative to width, A4 size*/
+	border: 2px solid black;
+}
+
+.poster-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.headline {
+	margin: 50% 2% 6% 2%;
+	color: white;
+	font-size: 6vw;
+	font-family: Impact; 
+	text-align: center;
+}
+
+.detail-container {
+	position: absolute;
+	bottom: 1%;
+	margin: 5%;
+}
+
+.detail {
+	font-size: 2vw;
+	font-family: "Comic Sans MS";
+	white-space: pre-line;
+}
