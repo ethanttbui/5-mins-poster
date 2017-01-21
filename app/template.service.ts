@@ -24,7 +24,7 @@ export class TemCusService {
 		return this.http.get("https://o88z2j88yh.execute-api.us-east-1.amazonaws.com/beta/spaces/" + id).toPromise().then(function (response) {
 			var poster = TEMPLATES[1];
 			var data = response.json().Items[0];
-			poster.detail3 = "Address: " + data.address;
+			poster.texts[3] = "Address: " + data.address;
 			return poster;
 		}).catch(this.handleError);
 	}
